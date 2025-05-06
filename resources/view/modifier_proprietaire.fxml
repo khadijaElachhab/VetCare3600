@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.ModifierProprietaireController"
+            stylesheets="/css/style.css"
+            styleClass="modifier-proprietaire-container">
+
+    <center>
+        <StackPane alignment="CENTER">
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+
+            <!-- Card container for the form -->
+            <VBox styleClass="proprietaire-form-container" maxWidth="500" spacing="0">
+
+                <!-- Form header with title -->
+                <VBox styleClass="proprietaire-form-header" alignment="CENTER">
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+                    <Label text="Modifier le propriétaire" styleClass="proprietaire-title"/>
+                </VBox>
+
+                <!-- Form content with fields -->
+                <VBox styleClass="proprietaire-form-content" spacing="20">
+                    <GridPane hgap="15" vgap="20">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="NEVER" minWidth="120" />
+                            <ColumnConstraints hgrow="ALWAYS" />
+                        </columnConstraints>
+
+                        <!-- Nom field -->
+                        <Label text="Nom :" styleClass="field-label"
+                               GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                        <TextField fx:id="fieldNom" styleClass="proprietaire-field"
+                                   GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                        <!-- Prénom field -->
+                        <Label text="Prénom :" styleClass="field-label"
+                               GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                        <TextField fx:id="fieldPrenom" styleClass="proprietaire-field"
+                                   GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                        <!-- Email field -->
+                        <Label text="Email :" styleClass="field-label"
+                               GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                        <TextField fx:id="fieldEmail" styleClass="proprietaire-field"
+                                   GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+                        <!-- Téléphone field -->
+                        <Label text="Téléphone :" styleClass="field-label"
+                               GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                        <TextField fx:id="fieldTelephone" styleClass="proprietaire-field"
+                                   GridPane.rowIndex="3" GridPane.columnIndex="1" />
+                    </GridPane>
+
+                    <!-- Buttons container -->
+                    <HBox styleClass="proprietaire-buttons-container">
+                        <Button text="Annuler"
+                                onAction="#annuler"
+                                styleClass="annuler-button"/>
+                        <Button text="Enregistrer"
+                                onAction="#enregistrerModification"
+                                styleClass="enregistrer-button"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>

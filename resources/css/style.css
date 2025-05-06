@@ -1,0 +1,737 @@
+/* Base styling */
+.root {
+    -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -fx-background-color: #b8c1f0; /* Light purple background */
+}
+
+/* Styling for the top navigation bar */
+.nav-bar {
+    -fx-background-color: #b8c1f0;
+    -fx-padding: 20px 40px;
+    -fx-spacing: 30px;
+    -fx-alignment: center-right;
+}
+
+/* Logo styling */
+.logo-text {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.paw-icon {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+}
+
+.heart-icon {
+    -fx-text-fill: #ff9eb9;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* Navigation links */
+.hyperlink {
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-underline: false;
+    -fx-border-color: transparent;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #666666;
+}
+
+.hyperlink:focused {
+    -fx-border-color: transparent;
+}
+
+/* Title and subtitle styling */
+.title-text {
+    -fx-text-fill: white;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+}
+
+.subtitle-text {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+/* Button styling */
+.search-button {
+    -fx-background-color: #ffed5e;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-radius: 25px;
+    -fx-padding: 12px 30px;
+    -fx-cursor: hand;
+}
+
+.search-button:hover {
+    -fx-background-color: #ffe126;
+}
+
+.vet-button {
+    -fx-background-color: #ffc7d5;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-radius: 25px;
+    -fx-padding: 12px 30px;
+    -fx-cursor: hand;
+}
+
+.vet-button:hover {
+    -fx-background-color: #ffafc3;
+}
+
+/* General table and list styling */
+.table-view, .list-view {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #e0e0e0;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: #f5f5f5;
+    -fx-size: 35px;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #e0e0e0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+    -fx-alignment: center-left;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #bbd6ff;
+}
+
+/* General form styling */
+.label {
+    -fx-text-fill: #333333;
+}
+
+.text-field, .text-area, .combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-padding: 5px;
+}
+
+.text-field:focused, .text-area:focused, .combo-box:focused {
+    -fx-border-color: #b8c1f0;
+}
+
+/* Agrandir le champ texte */
+.text-field {
+    -fx-pref-width: 400px;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+}
+
+/* Default button styling for other buttons */
+.button {
+    -fx-background-color: #4d4d4d;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 3px;
+    -fx-padding: 8px 15px;
+}
+
+.button:hover {
+    -fx-background-color: #333333;
+}
+
+/* Scroll bars */
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: #f0f0f0;
+}
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #c0c0c0;
+    -fx-background-radius: 5em;
+}
+
+.scroll-bar:vertical .thumb:hover,
+.scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #a0a0a0;
+}
+
+/* Container card for forms */
+.owner-card {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-padding: 30;
+    -fx-spacing: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.3, 0, 5);
+    -fx-max-width: 600px;
+}
+
+/* Résultat affiché en bas */
+.results-label {
+    -fx-text-fill: #444444;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-opacity: 0.6;
+}
+
+/* Animal Form specific styling */
+.animal-form {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-padding: 30;
+    -fx-spacing: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.3, 0, 5);
+    -fx-max-width: 600px;
+}
+
+.animal-form-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.animal-form .combo-box {
+    -fx-background-color: #f0f5ff;
+    -fx-border-color: #c0d6ff;
+    -fx-pref-width: 400px;
+}
+
+.animal-form .combo-box .list-cell {
+    -fx-padding: 10px;
+}
+
+.animal-form .combo-box .list-view .list-cell:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+.animal-form .combo-box .list-view .list-cell:selected {
+    -fx-background-color: #dfdfdf;
+}
+
+.animal-form .spinner-button {
+    -fx-padding: 0px 5px;
+    -fx-font-size: 8px;
+    -fx-background-color: #eeeeee;
+    -fx-border-color: #cccccc;
+}
+
+.animal-form .button {
+    -fx-background-color: #4d4d4d;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 3px;
+}
+
+.animal-form .button:hover {
+    -fx-background-color: #333333;
+}
+
+/* Form field labels */
+.field-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+/* Age spinner buttons */
+.age-spinner-buttons {
+    -fx-spacing: 0;
+}
+
+.age-spinner-button {
+    -fx-padding: 2px 5px;
+    -fx-font-size: 8px;
+    -fx-min-width: 20px;
+    -fx-min-height: 12px;
+    -fx-background-color: #f7f7f7;
+    -fx-border-color: #dddddd;
+}
+
+/* Styles spécifiques pour la table des vétérinaires */
+.vet-table {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #d0d0d0;
+    -fx-padding: 0;
+}
+
+.vet-table .column-header-background {
+    -fx-background-color: #ffc7d5;
+    -fx-background-radius: 10px 10px 0 0;
+    -fx-background-insets: 0;
+}
+
+.vet-table .column-header, .vet-table .filler {
+    -fx-background-color: transparent;
+    -fx-size: 45px;
+    -fx-border-width: 0;
+}
+
+.vet-table .column-header .label {
+    -fx-text-fill: #222222;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-alignment: center;
+    -fx-padding: 10px;
+}
+
+.vet-table .table-row-cell {
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-padding: 10px 0;
+}
+
+.vet-table .table-row-cell:odd {
+    -fx-background-color: #e8e8e8;
+}
+
+.vet-table .table-row-cell:even {
+    -fx-background-color: #f0f0f0;
+}
+
+.vet-table .table-row-cell:selected {
+    -fx-background-color: #c9e1ff;
+}
+
+.vet-table .table-cell {
+    -fx-alignment: center;
+    -fx-padding: 10px;
+    -fx-text-fill: #222222;
+    -fx-font-size: 13px;
+}
+
+/* Style pour les boutons de la page des vétérinaires */
+.vet-button, .search-button {
+    -fx-min-width: 200px;
+}
+
+/* Ajout d'ombres pour plus de contraste */
+.vet-table {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0.2, 0, 2);
+}
+
+/* Styles spécifiques pour la forme moderne */
+
+/* Container principal */
+.modern-form-container {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.3, 0, 3);
+    -fx-max-width: 600px;
+}
+
+/* En-tête avec fond rose */
+.form-header {
+    -fx-background-color: #ffccd5;
+    -fx-background-radius: 10px 10px 0 0;
+    -fx-padding: 15px;
+}
+
+.form-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Conteneur du formulaire */
+.form-content {
+    -fx-padding: 20px;
+}
+
+/* Style pour les champs */
+.field-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.modern-field {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px;
+    -fx-pref-height: 40px;
+}
+
+/* Style pour le ComboBox */
+.modern-combo {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+    -fx-pref-height: 40px;
+}
+
+.modern-combo .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.modern-combo .list-cell {
+    -fx-padding: 8px;
+    -fx-text-fill: #333333;
+}
+
+/* Style pour la popup du ComboBox */
+.modern-combo .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 3);
+}
+
+.modern-combo .list-view .list-cell:selected {
+    -fx-background-color: #f0f0f0;
+}
+
+.modern-combo .list-view .list-cell:hover {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Boutons */
+.button-container {
+    -fx-padding: 10px 0 0 0;
+}
+
+.cancel-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px 20px;
+}
+
+.cancel-button:hover {
+    -fx-background-color: #5a6268;
+}
+
+.add-button {
+    -fx-background-color: #5e72e4;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px 20px;
+}
+
+.add-button:hover {
+    -fx-background-color: #485ec4;
+}
+
+/* Style pour le label de l'animal */
+.animal-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+/* Specific styling for Visit History Table */
+.visits-table {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #d0d0d0;
+    -fx-padding: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0.2, 0, 2);
+}
+
+.visits-table .column-header-background {
+    -fx-background-color: #b8c1f0; /* Matches your app's purple theme */
+    -fx-background-radius: 10px 10px 0 0;
+    -fx-background-insets: 0;
+}
+
+.visits-table .column-header, .visits-table .filler {
+    -fx-background-color: transparent;
+    -fx-size: 45px;
+    -fx-border-width: 0;
+}
+
+.visits-table .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-alignment: center-left;
+    -fx-padding: 10px;
+}
+
+.visits-table .table-row-cell {
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-padding: 10px 0;
+}
+
+.visits-table .table-row-cell:odd {
+    -fx-background-color: #f0f5ff; /* Light purple-ish tint for odd rows */
+}
+
+.visits-table .table-row-cell:even {
+    -fx-background-color: white;
+}
+
+.visits-table .table-row-cell:selected {
+    -fx-background-color: #d8e1ff; /* Lighter purple for selection */
+}
+
+.visits-table .table-cell {
+    -fx-alignment: center-left;
+    -fx-padding: 10px;
+    -fx-text-fill: #333333;
+    -fx-font-size: 13px;
+}
+
+/* Header styling */
+.visits-header {
+    -fx-background-color: #b8c1f0;
+    -fx-padding: 15px 20px;
+    -fx-background-radius: 10px 10px 0 0;
+}
+
+.visits-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.visits-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+/* Container for the whole page */
+.visits-container {
+    -fx-background-color: #f5f7ff;
+    -fx-padding: 20px;
+}
+
+/* Add button styling */
+.add-visit-button {
+    -fx-background-color: #ffc7d5;
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 20px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.add-visit-button:hover {
+    -fx-background-color: #ffafc3;
+}
+
+/* Empty state message */
+.empty-visits-message {
+    -fx-text-fill: #888888;
+    -fx-font-size: 16px;
+    -fx-font-style: italic;
+    -fx-padding: 20px;
+    -fx-alignment: center;
+}
+
+/* Bottom action bar */
+.action-bar {
+    -fx-background-color: white;
+    -fx-padding: 15px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1 0 0 0;
+    -fx-spacing: 10px;
+    -fx-alignment: center-right;
+}
+
+/* Format date text to be more readable */
+.date-cell {
+    -fx-font-weight: bold;
+}
+
+
+/* Styles spécifiques pour la page Modifier Propriétaire */
+
+/* Fond spécifique pour la page modifier propriétaire */
+.modifier-proprietaire-container {
+    -fx-background-color: linear-gradient(to bottom, #b8c1f0, #d0d6f5);
+}
+
+/* Container spécifique pour la page du formulaire */
+.proprietaire-form-container {
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0.3, 0, 3);
+    -fx-max-width: 500px;
+}
+
+/* En-tête du formulaire avec fond rose */
+.proprietaire-form-header {
+    -fx-background-color: #ffc7d5;
+    -fx-background-radius: 15px 15px 0 0;
+    -fx-padding: 20px;
+    -fx-alignment: center;
+}
+
+.proprietaire-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Contenu du formulaire propriétaire */
+.proprietaire-form-content {
+    -fx-padding: 25px;
+    -fx-spacing: 20px;
+}
+
+/* Champs spécifiques au formulaire propriétaire */
+.proprietaire-field {
+    -fx-background-color: #f7f9ff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 12px;
+    -fx-pref-height: 40px;
+    -fx-font-size: 14px;
+}
+
+.proprietaire-field:focused {
+    -fx-border-color: #b8c1f0;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(184,193,240,0.3), 5, 0, 0, 0);
+}
+
+/* Container des boutons pour le formulaire propriétaire */
+.proprietaire-buttons-container {
+    -fx-padding: 20px 0 0 0;
+    -fx-alignment: center-right;
+    -fx-spacing: 15px;
+}
+
+/* Bouton Enregistrer pour propriétaire */
+.enregistrer-button {
+    -fx-background-color: #5e72e4;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px;
+    -fx-padding: 12px 25px;
+    -fx-cursor: hand;
+    -fx-min-width: 130px;
+}
+
+.enregistrer-button:hover {
+    -fx-background-color: #4a5fd0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 3, 0, 0, 1);
+}
+
+/* Bouton Annuler pour propriétaire */
+.annuler-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px;
+    -fx-padding: 12px 25px;
+    -fx-cursor: hand;
+    -fx-min-width: 130px;
+}
+
+.annuler-button:hover {
+    -fx-background-color: #5a6268;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 3, 0, 0, 1);
+}
+
+
+/* Styles supplémentaires pour la page d'informations du propriétaire */
+
+/* Ajustement de la largeur globale de la page et ajout du défilement */
+.modifier-proprietaire-container {
+    -fx-min-width: 850px;
+    -fx-pref-width: 1000px;
+    -fx-max-height: 700px;
+    -fx-fit-to-width: true;
+}
+
+/* Ajout de la fonctionnalité de défilement vertical */
+.scroll-container {
+    -fx-fit-to-width: true;
+    -fx-fit-to-height: false;
+    -fx-hbar-policy: never;
+    -fx-vbar-policy: as-needed;
+    -fx-padding: 0 5 0 0;
+}
+
+/* Container global avec espacement vertical augmenté */
+.infos-proprietaire-global {
+    -fx-spacing: 30;
+    -fx-alignment: center;
+    -fx-padding: 30 30 50 30;
+}
+
+/* Style pour les valeurs d'information */
+.info-value {
+    -fx-font-size: 14px;
+    -fx-padding: 5px 10px;
+    -fx-background-color: #f7f9ff;
+    -fx-background-radius: 5px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5px;
+    -fx-min-height: 30px;
+    -fx-alignment: center-left;
+}
+
+/* Amélioration de l'espacement de la liste des animaux */
+.animals-list-container {
+    -fx-min-height: 250px;
+    -fx-spacing: 20;
+    -fx-padding: 0 0 20 0;
+}
+
+/* Amélioration de l'espacement des tableaux */
+.visits-table .table-column {
+    -fx-alignment: center-left;
+    -fx-padding: 10px 15px;
+}
+
+/* Amélioration de la sélection des lignes de tableau */
+.visits-table .table-row-cell:selected {
+    -fx-background-color: #d8e1ff;
+    -fx-border-color: #b8c1f0;
+    -fx-border-width: 0 0 1 0;
+}
+
+/* Espacement amélioré pour la section des boutons d'action */
+.buttons-container {
+    -fx-spacing: 15;
+    -fx-padding: 15 0 30 0;
+    -fx-alignment: center;
+}
+
+/* Animation au survol des boutons d'action */
+.enregistrer-button, .add-button, .vet-button, .add-visit-button, .annuler-button, .cancel-button {
+    -fx-transition: -fx-background-color 0.3s, -fx-effect 0.3s;
+}
+
+/* Amélioration des titres dans les sections */
+.proprietaire-title, .visits-title {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0, 0, 1);
+    -fx-padding: 0 0 10 0;
+}
+
+/* Animation au survol des lignes de tableau */
+.visits-table .table-row-cell:hover {
+    -fx-background-color: #eef2ff;
+}

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.geometry.Insets?>
+
+
+<BorderPane fx:id="mainBorderPane"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.AccueilController"
+            stylesheets="/css/style.css">
+
+    <!-- Barre de navigation -->
+    <top>
+        <HBox spacing="20" alignment="CENTER" style="-fx-background-color: #b8c1f0; -fx-padding: 15;">
+            <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                <Label text="🐾" style="-fx-text-fill: white; -fx-font-size: 24px;" />
+                <Label text="PAWLY"  style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;" />
+                <Label text="♥" style="-fx-text-fill: #ff9eb9; -fx-font-size: 24px; -fx-font-weight: bold;" />
+            </HBox>
+
+            <HBox alignment="CENTER_RIGHT" spacing="15">
+                <Hyperlink text="Accueil" onAction="#goHome" style="-fx-text-fill: #333333; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+                <Hyperlink text="Rechercher" onAction="#goFindOwners" style="-fx-text-fill: #333333; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+                <Hyperlink text="Ajouter propriétaire" onAction="#goAddOwner" style="-fx-text-fill: #333333; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+                <Hyperlink text="Vétérinaires" onAction="#goVets" style="-fx-text-fill: #333333; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+                <Hyperlink text="Contact" onAction="#goContact" style="-fx-text-fill: #333333; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- Contenu principal -->
+    <center>
+        <StackPane>
+            <!-- Contenu central -->
+            <VBox alignment="CENTER" spacing="30">
+                <padding>
+                    <Insets top="40" right="20" bottom="40" left="20" />
+                </padding>
+
+                <!-- Titre et sous-titre -->
+                <VBox alignment="CENTER" spacing="15">
+                    <HBox alignment="CENTER" spacing="10">
+                        <Label text="🐾" style="-fx-text-fill: white; -fx-font-size: 36px;" />
+                        <Label text="PUPPY ADVENTURES INDOORS" style="-fx-text-fill: white; -fx-font-size: 36px; -fx-font-weight: bold;" />
+                        <Label text="♥" style="-fx-text-fill: #ff9eb9; -fx-font-size: 36px; -fx-font-weight: bold;" />
+                    </HBox>
+
+                    <Label text="Des soins et activités adaptés pour vos compagnons."
+                           style="-fx-text-fill: white; -fx-font-size: 18px;" />
+                </VBox>
+
+                <!-- Boutons d'action -->
+                <VBox alignment="CENTER" spacing="15" maxWidth="500">
+                    <Button text="Rechercher un propriétaire"
+                            onAction="#goFindOwners"
+                            style="-fx-background-color: #ffed5e; -fx-text-fill: #333333; -fx-font-weight: bold; -fx-font-size: 16px; -fx-background-radius: 25; -fx-padding: 12 30;">
+                        <prefWidth>400</prefWidth>
+                    </Button>
+
+                    <Button text="Voir les vétérinaires"
+                            onAction="#goVets"
+                            style="-fx-background-color: #ffc7d5; -fx-text-fill: #333333; -fx-font-weight: bold; -fx-font-size: 16px; -fx-background-radius: 25; -fx-padding: 12 30;">
+                        <prefWidth>400</prefWidth>
+                    </Button>
+                </VBox>
+            </VBox>
+
+            <!-- Ici, vous pourrez ajouter vos images de chiens plus tard -->
+        </StackPane>
+    </center>
+
+    <!-- Pied de page -->
+    <bottom>
+        <VBox style="-fx-background-color: #ffc7d5; -fx-padding: 15;">
+            <HBox alignment="CENTER" spacing="20">
+                <VBox spacing="5" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="📞" style="-fx-font-size: 14px;"/>
+                        <Label text="0716802866" style="-fx-font-size: 14px;"/>
+                    </HBox>
+
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="✉" style="-fx-font-size: 14px;"/>
+                        <VBox spacing="2">
+                            <Label text="DOUAA.BRAHIMI.ESTN24@ump.ac.ma" style="-fx-font-size: 14px;"/>
+                            <Label text="KHADIJA.ELACHHAB.ESTN24@ump.ac.ma" style="-fx-font-size: 14px;"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="📍" style="-fx-font-size: 14px;"/>
+                        <Label text="ESTN, BP:1458, Nador 62000" style="-fx-font-size: 14px;"/>
+                    </HBox>
+                </VBox>
+
+                <VBox alignment="CENTER_RIGHT" spacing="5">
+                    <Label text="© 2025 PAWLY. Tous droits réservés." style="-fx-font-size: 14px;"/>
+                    <Label text="Développé par : Douae Brahimi et" style="-fx-font-size: 14px;"/>
+                    <Label text="Khadija El Achhab" style="-fx-font-size: 14px;"/>
+                </VBox>
+            </HBox>
+        </VBox>
+    </bottom>
+
+</BorderPane>

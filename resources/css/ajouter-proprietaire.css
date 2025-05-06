@@ -1,0 +1,53 @@
+/* Fond rose doux */
+.root {
+    -fx-background-color: #ffc7d5;
+}
+
+/* Carte blanche principale */
+.form-card {
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0.3, 0, 4);
+}
+
+/* Titre du formulaire */
+.form-title {
+    -fx-text-fill: #333;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 20px 0;
+    -fx-alignment: center;
+}
+
+/* Champs de texte */
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px;
+    -fx-pref-height: 35px;
+    -fx-pref-width: 100%;
+}
+
+/* Étiquettes */
+Label {
+    -fx-text-fill: #555;
+    -fx-font-size: 14px;
+}
+
+/* Boutons */
+.button {
+    -fx-background-color: #ffeb99;
+    -fx-text-fill: #333;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20px;
+    -fx-min-width: 100px;
+    -fx-padding: 8px 15px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-opacity: 0.9;
+}

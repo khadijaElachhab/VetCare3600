@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.AjouterAnimalController"
+            style="-fx-background-color: #ffeb8e;"
+            stylesheets="/css/style.css">
+    <center>
+        <VBox styleClass="animal-form" alignment="CENTER">
+
+            <Label text="Ajouter un animal" styleClass="animal-form-title" />
+
+            <VBox spacing="10">
+                <padding><Insets top="20" /></padding>
+
+                <Label text="Nom" styleClass="field-label" />
+                <TextField fx:id="fieldNom"/>
+
+                <Label text="Âge" styleClass="field-label">
+                    <VBox.margin>
+                        <Insets top="10" />
+                    </VBox.margin>
+                </Label>
+                <HBox spacing="0">
+                    <TextField fx:id="fieldAge" HBox.hgrow="ALWAYS" />
+                </HBox>
+
+                <Label text="Type" styleClass="field-label">
+                    <VBox.margin>
+                        <Insets top="10" />
+                    </VBox.margin>
+                </Label>
+                <ComboBox fx:id="comboType" promptText="-- Sélectionner --" maxWidth="Infinity">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Chien" />
+                            <String fx:value="Chat" />
+                            <String fx:value="Oiseau" />
+                            <String fx:value="Autre" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+                <Button text="Enregistrer" onAction="#ajouterAnimal">
+
+                    <VBox.margin>
+                        <Insets top="25" />
+                    </VBox.margin>
+                </Button>
+                <Button text="Retour" onAction="#annuler">
+
+                    <VBox.margin>
+                        <Insets top="25" />
+                    </VBox.margin>
+                </Button>
+            </VBox>
+        </VBox>
+    </center>
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20" />
+    </padding>
+</BorderPane>

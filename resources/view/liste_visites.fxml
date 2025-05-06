@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.ListeVisitesController"
+            styleClass="visits-container"
+            stylesheets="/css/style.css">
+
+    <top>
+        <VBox styleClass="visits-header">
+            <Label text="Historique des visites" styleClass="visits-title"/>
+            <Label fx:id="animalNameLabel" styleClass="visits-subtitle"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <TableView fx:id="tableVisites" styleClass="visits-table" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colDate" text="Date" prefWidth="150" styleClass="date-cell"/>
+                    <TableColumn fx:id="colMotif" text="Motif" prefWidth="250"/>
+                    <TableColumn fx:id="colVeto" text="Vétérinaire" prefWidth="200"/>
+                </columns>
+                <placeholder>
+                    <Label text="Aucune visite enregistrée" styleClass="empty-visits-message"/>
+                </placeholder>
+            </TableView>
+        </VBox>
+    </center>
+
+</BorderPane>

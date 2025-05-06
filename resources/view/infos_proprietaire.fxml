@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.InfosProprietaireController"
+            stylesheets="/css/style.css"
+            styleClass="infos-proprietaire-global">
+    <center>
+        <ScrollPane styleClass="scroll-container">
+        <VBox spacing="20" alignment="CENTER">
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+
+            <!-- Container principal pour les informations du propriétaire -->
+            <VBox styleClass="proprietaire-form-container" minWidth="800" maxWidth="1000">
+                <!-- En-tête avec titre -->
+                <VBox styleClass="proprietaire-form-header" alignment="CENTER">
+                    <Label text="Informations du Propriétaire"
+                           styleClass="proprietaire-title"/>
+                </VBox>
+
+                <!-- Contenu des informations du propriétaire -->
+                <VBox styleClass="proprietaire-form-content" spacing="25">
+                    <!-- Informations du propriétaire -->
+                    <GridPane hgap="20" vgap="15" alignment="CENTER">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="NEVER" minWidth="120" />
+                            <ColumnConstraints hgrow="ALWAYS" minWidth="300" />
+                        </columnConstraints>
+
+                        <Label text="Prénom :" GridPane.rowIndex="0" GridPane.columnIndex="0"
+                               styleClass="field-label"/>
+                        <Label fx:id="labelPrenom" GridPane.rowIndex="0" GridPane.columnIndex="1"
+                               styleClass="info-value"/>
+
+                        <Label text="Nom :" GridPane.rowIndex="1" GridPane.columnIndex="0"
+                               styleClass="field-label"/>
+                        <Label fx:id="labelNom" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                               styleClass="info-value"/>
+
+                        <Label text="Email :" GridPane.rowIndex="2" GridPane.columnIndex="0"
+                               styleClass="field-label"/>
+                        <Label fx:id="labelEmail" GridPane.rowIndex="2" GridPane.columnIndex="1"
+                               styleClass="info-value"/>
+
+                        <Label text="Téléphone :" GridPane.rowIndex="3" GridPane.columnIndex="0"
+                               styleClass="field-label"/>
+                        <Label fx:id="labelTelephone" GridPane.rowIndex="3" GridPane.columnIndex="1"
+                               styleClass="info-value"/>
+                    </GridPane>
+
+                    <!-- Boutons pour les actions sur le propriétaire -->
+                    <HBox spacing="15" alignment="CENTER">
+                        <Button text="Modifier" onAction="#modifierProprietaire"
+                                styleClass="enregistrer-button"/>
+                        <Button text="Ajouter un animal" onAction="#ajouterAnimal"
+                                styleClass="add-button"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+
+            <!-- Container pour les animaux -->
+            <VBox styleClass="proprietaire-form-container" minWidth="800" maxWidth="1000">
+                <VBox styleClass="visits-header" alignment="CENTER">
+                    <Label text="Liste des animaux" styleClass="visits-title"/>
+                </VBox>
+
+                <VBox styleClass="proprietaire-form-content" spacing="20">
+                    <!-- Liste des animaux -->
+                    <TableView fx:id="tableAnimaux" prefHeight="250" styleClass="visits-table">
+                        <columns>
+                            <TableColumn fx:id="colNomAnimal" text="Nom" prefWidth="200"/>
+                            <TableColumn fx:id="colAge" text="Age" prefWidth="150"/>
+                            <TableColumn fx:id="colType" text="Type" prefWidth="250"/>
+                        </columns>
+                        <placeholder>
+                            <Label text="Aucun animal enregistré" styleClass="empty-visits-message"/>
+                        </placeholder>
+                    </TableView>
+
+                    <!-- Boutons pour les actions sur les animaux -->
+                    <HBox spacing="20" alignment="CENTER">
+                        <Button text="Modifier l'animal" onAction="#ouvrirFenetreModification"
+                                styleClass="enregistrer-button" minWidth="150"/>
+                        <Button text="Ajouter une visite" onAction="#ajouterVisite"
+                                styleClass="add-visit-button" minWidth="150"/>
+                        <Button text="Voir visites" onAction="#voirVisites"
+                                styleClass="vet-button" minWidth="150"/>
+                        <Button text="Supprimer animal" onAction="#supprimerAnimal"
+                                styleClass="annuler-button" minWidth="150"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+
+            <!-- Bouton pour retourner à l'accueil -->
+            <Button text="Retour à l'accueil" onAction="#goHome"
+                    styleClass="cancel-button"/>
+        </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

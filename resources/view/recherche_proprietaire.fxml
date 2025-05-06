@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.RechercheProprietaireController"
+            stylesheets="/css/style.css">
+
+    <!-- Barre de navigation -->
+    <top>
+        <HBox spacing="30" alignment="CENTER_LEFT" styleClass="nav-bar">
+            <Label text="PAWLY" styleClass="logo-text"/>
+            <Label text="♥" styleClass="heart-icon"/>
+            <Hyperlink text="Accueil" />
+            <Hyperlink text="Rechercher" />
+            <Hyperlink text="Ajouter propriétaire" />
+            <Hyperlink text="Vétérinaires" />
+            <Hyperlink text="Contact" />
+        </HBox>
+    </top>
+
+    <!-- Contenu principal -->
+    <center>
+        <VBox alignment="CENTER" spacing="40" style="-fx-padding: 40 0;">
+            <VBox alignment="CENTER" spacing="20" styleClass="owner-card">
+
+                <Label text=" Rechercher un propriétaire" styleClass="title-text"/>
+
+                <HBox alignment="CENTER" spacing="10">
+                    <TextField fx:id="champNom" promptText="Entrez un nom de famille"/>
+                    <Button text="Rechercher" onAction="#rechercherProprietaire" styleClass="search-button"/>
+                </HBox>
+
+                <Button text=" Ajouter un nouveau propriétaire" onAction="#ajouterProprietaire" styleClass="vet-button"/>
+            </VBox>
+
+        </VBox>
+    </center>
+</BorderPane>

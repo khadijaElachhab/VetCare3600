@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.AjouterVisiteController"
+      stylesheets="/css/style.css"
+      spacing="15"
+      styleClass="modern-form-container">
+
+    <!-- En-tête avec titre rose -->
+    <StackPane styleClass="form-header">
+        <Label text="Ajouter une visite" styleClass="form-title"/>
+    </StackPane>
+
+    <!-- Conteneur principal -->
+    <VBox spacing="20" styleClass="form-content">
+        <!-- Champ pour afficher l'animal sélectionné -->
+        <Label fx:id="labelAnimal" text="Visite pour: " styleClass="animal-label"/>
+
+        <!-- Date -->
+        <VBox spacing="5">
+            <Label text="Date" styleClass="field-label"/>
+            <TextField fx:id="fieldDate" promptText="jj/mm/aaaa" styleClass="modern-field"/>
+        </VBox>
+
+        <!-- Diagnostic/Motif -->
+        <VBox spacing="5">
+            <Label text="Diagnostic" styleClass="field-label"/>
+            <TextField fx:id="fieldMotif" promptText="" styleClass="modern-field"/>
+        </VBox>
+
+        <!-- Vétérinaire -->
+        <VBox spacing="5">
+            <Label text="Vétérinaire" styleClass="field-label"/>
+            <ComboBox fx:id="comboVeto" promptText="-- Sélectionner un vétérinaire --"
+                      styleClass="modern-combo" prefWidth="Infinity"/>
+        </VBox>
+
+        <!-- Boutons -->
+        <HBox spacing="10" alignment="CENTER_RIGHT" styleClass="button-container">
+            <Button text="Annuler" onAction="#annuler" styleClass="cancel-button"/>
+            <Button text="Ajouter" onAction="#ajouterVisite" defaultButton="true" styleClass="add-button"/>
+        </HBox>
+    </VBox>
+</VBox>

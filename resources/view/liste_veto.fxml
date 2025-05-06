@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.ListeVetoController"
+            stylesheets="/css/style.css"
+            style="-fx-background-color: #FFEB99;">
+
+    <top>
+        <VBox alignment="CENTER" spacing="20">
+            <padding>
+                <Insets top="30" bottom="20" />
+            </padding>
+            <Label text="Nos Vétérinaires" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #333333;" />
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <padding>
+                <Insets left="50" right="50" />
+            </padding>
+            <TableView fx:id="tableVeto" styleClass="vet-table">
+                <columns>
+                    <TableColumn fx:id="colPrenom" text="Prénom" prefWidth="150"/>
+                    <TableColumn fx:id="colNom" text="Nom" prefWidth="150"/>
+                    <TableColumn fx:id="colSpecialite" text="Spécialité" prefWidth="250"/>
+                    <TableColumn fx:id="colEmail" text="Email" prefWidth="250"/>
+                    <TableColumn fx:id="colTelephone" text="Téléphone" prefWidth="150"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="50">
+            <padding>
+                <Insets top="20" bottom="20" left="20" right="20" />
+            </padding>
+            <Button fx:id="btnRetour" text="Retour" onAction="#goHome" styleClass="vet-button"/>
+            <Button fx:id="btnAjouter" text="Ajouter un propriétaire" onAction="#ajouterProprietaire" styleClass="search-button"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
